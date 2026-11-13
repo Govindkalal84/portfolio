@@ -1918,3 +1918,24 @@ html[data-theme="light"] .moon-icon {
         flex-direction: column;
     }
 }
+
+
+/* LeetCode Custom Styling */
+.pill-leetcode:hover {
+    border-color: #ffa116 !important;
+    color: #ffa116 !important;
+    box-shadow: 0 4px 12px rgba(255, 161, 22, 0.25) !important;
+}
+
+.pill-leetcode svg {
+    fill: #ffa116;
+}
+
+.icon-leetcode-box {
+    background: rgba(255, 161, 22, 0.15) !important;
+    color: #ffa116 !important;
+}
+
+.footer-link-pill svg path {
+    fill: currentColor;
+}
