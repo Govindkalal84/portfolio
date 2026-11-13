@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Govind - Java Full Stack Developer Portfolio. Building robust backends and clean frontends with Spring Boot, React, and SQL.">
-    <meta name="keywords" content="Portfolio, Govind, Full Stack Developer, Spring Boot, React, Java, SQL, REST APIs">
-    <meta name="author" content="Govind">
-    <title>Govind | Java Full Stack Developer</title>
+    <meta name="description" content="Govind Sadhanande - Java Backend & Full Stack Developer Portfolio. Specializing in scalable Spring Boot microservices, gRPC, Kafka, Docker, and React.js.">
+    <meta name="keywords" content="Govind Sadhanande, Java Backend Developer, Full Stack Developer, Spring Boot, Microservices, React, Docker, Kafka, gRPC, MySQL, Bengaluru">
+    <meta name="author" content="Govind Sadhanande">
+    <title>Govind Sadhanande | Java Backend & Full Stack Developer</title>
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
 </head>
@@ -22,26 +25,37 @@
     <!-- Header / Navbar -->
     <header class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo" id="nav-logo">
+            <a href="#hero" class="nav-logo" id="nav-logo">
                 <span class="logo-bracket">&lt;</span>
                 <span class="logo-text">Govind</span>
+                <span class="logo-dot">.</span>
                 <span class="logo-bracket">/&gt;</span>
             </a>
             
             <nav class="nav-menu" id="nav-menu">
                 <a href="#hero" class="nav-link active" id="link-hero">Home</a>
                 <a href="#about" class="nav-link" id="link-about">About</a>
+                <a href="#skills" class="nav-link" id="link-skills">Skills</a>
                 <a href="#projects" class="nav-link" id="link-projects">Projects</a>
                 <a href="#timeline" class="nav-link" id="link-timeline">Experience</a>
                 <a href="#contact" class="nav-link" id="link-contact">Contact</a>
             </nav>
 
             <div class="nav-actions">
+                <a href="Govind_Sadhanande_Resume.pdf" download="Govind_Sadhanande_Resume.pdf" class="btn-nav-resume" id="nav-resume-btn" title="Download Official Resume PDF">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    <span>Resume</span>
+                </a>
+
                 <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark theme">
                     <!-- Sun Icon (Dark Mode Active -> Show Sun) -->
                     <svg class="icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="12" x2="12" y2="3"></line>
                         <line x1="12" y1="21" x2="12" y2="23"></line>
                         <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
                         <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
@@ -69,27 +83,90 @@
         <!-- Hero Section -->
         <section class="hero" id="hero">
             <div class="hero-content">
-                <div class="hero-badge">Welcome to my Portfolio</div>
+                <div class="hero-status">
+                    <span class="status-pulse"></span>
+                    <span>Full Stack Developer Intern @ Tap Academy • Bengaluru</span>
+                </div>
                 <h1 class="hero-title">
-                    Hi, I'm <span class="gradient-text">Govind</span>
+                    Hi, I'm <span class="gradient-text">Govind Sadhanande</span>
                 </h1>
                 <h2 class="hero-subtitle">
-                    I build <span class="typing-text" id="typing-text"></span><span class="typed-cursor">|</span>
+                    I engineer <span class="typing-text" id="typing-text"></span><span class="typed-cursor">|</span>
                 </h2>
                 <p class="hero-description">
-                    A Java Full Stack Developer specializing in robust Spring Boot backends, scalable REST APIs, database systems, and responsive React frontend interfaces.
+                    Results-driven Java Backend & Full Stack Developer building scalable RESTful web applications, distributed microservices, and concurrency-safe transaction engines using <strong>Java 17, Spring Boot, Hibernate, MySQL, and React.js</strong>.
                 </p>
                 <div class="hero-cta">
                     <a href="#projects" class="btn btn-primary" id="cta-work">
-                        <span>View Projects</span>
+                        <span>Explore Projects</span>
                         <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <line x1="5" y1="12" x2="19" y2="12"></line>
                             <polyline points="12 5 19 12 12 19"></polyline>
                         </svg>
                     </a>
-                    <a href="#contact" class="btn btn-secondary" id="cta-contact">Let's Connect</a>
+                    <a href="Govind_Sadhanande_Resume.pdf" download="Govind_Sadhanande_Resume.pdf" class="btn btn-secondary" id="cta-resume">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        <span>Download CV</span>
+                    </a>
+                    <a href="#contact" class="btn btn-outline" id="cta-contact">Let's Connect</a>
+                </div>
+
+                <!-- Hero Social Pills -->
+                <div class="hero-socials">
+                    <a href="https://github.com/Govindkalal84" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="GitHub Profile">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://linkedin.com/in/govind-sadhanande" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="LinkedIn Profile">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="mailto:ntg043172@gmail.com" class="social-pill" aria-label="Email Me">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <span>ntg043172@gmail.com</span>
+                    </a>
                 </div>
             </div>
+
+            <!-- Key Engineering Metrics Counter -->
+            <div class="metrics-container container">
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-number">15+</div>
+                        <div class="metric-label">Production REST APIs</div>
+                        <div class="metric-sub">Layered architecture & DTOs</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-number">0</div>
+                        <div class="metric-label">Double-Booking Collisions</div>
+                        <div class="metric-sub">@Transactional row locking</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-number">-45%</div>
+                        <div class="metric-label">Query Latency Reduced</div>
+                        <div class="metric-sub">JPQL JOIN FETCH & indexing</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-number">100%</div>
+                        <div class="metric-label">Unhandled 500 Eliminated</div>
+                        <div class="metric-sub">Centralized @ControllerAdvice</div>
+                    </div>
+                </div>
+            </div>
+
             <div class="scroll-indicator">
                 <span class="mouse-icon">
                     <span class="wheel"></span>
@@ -107,71 +184,163 @@
                 <div class="about-grid">
                     <div class="about-image-wrapper">
                         <div class="about-image-card">
-                            <img src="images/avatar.jpg" alt="Govind profile picture" class="about-img" id="about-img">
+                            <img src="images/avatar.jpg" alt="Govind Sadhanande profile photo" class="about-img" id="about-img">
                             <div class="about-image-glow"></div>
+                            <div class="about-badge-floating">
+                                <span class="badge-icon">⚡</span>
+                                <span>Java 17 • Spring Boot</span>
+                            </div>
                         </div>
                     </div>
 
                     <div class="about-info">
-                        <h3>Java Full Stack Developer</h3>
+                        <span class="about-tagline">Java Backend & Full Stack Engineer</span>
+                        <h3>Building High-Throughput & Resilient Systems</h3>
                         <p class="about-text">
-                            I am a Full Stack Developer with hands-on practice in Spring Boot for backend development and React & HTML/CSS/Tailwind for responsive frontend designs. I focus on writing clean, maintainable code and building robust database integrations.
+                            I am a Full Stack Developer Intern at <strong>Tap Academy</strong> (Bengaluru) with deep hands-on expertise in architecting <strong>cloud-native microservices</strong>, transactional data engines, and full-stack web applications.
                         </p>
                         <p class="about-text">
-                            With a strong foundation in Java programming, REST APIs, and SQL databases, I thrive on solving complex backend problems and translating them into seamless, user-centric web applications. I am committed to continuous learning and secure coding practices.
+                            My core technical focus centers on <strong>concurrency-safe transaction isolation</strong>, resolving complex database performance bottlenecks (N+1 query anomalies, schema indexing), role-based JWT security architectures, and automated API validation pipelines.
+                        </p>
+                        <p class="about-text">
+                            I hold a B.E. in Computer Science & Engineering from <strong>Bheemanna Khandre Institute of Technology</strong> and professional certifications in <strong>Java Full Stack Development</strong> and <strong>Cyber Security (OWASP Top 10)</strong>.
                         </p>
 
-                        <div class="skills-showcase">
-                            <h4>Core Stack & Technologies</h4>
-                            <div class="skills-container">
-                                <span class="skill-chip">
-                                    <svg class="chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
-                                    </svg>
-                                    Java
-                                </span>
-                                <span class="skill-chip">
-                                    <svg class="chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                                    </svg>
-                                    Spring Boot
-                                </span>
-                                <span class="skill-chip">
-                                    <svg class="chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(30,12,12)"></ellipse>
-                                        <ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(90,12,12)"></ellipse>
-                                        <ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(150,12,12)"></ellipse>
-                                    </svg>
-                                    React.js
-                                </span>
-                                <span class="skill-chip">
-                                    <svg class="chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <line x1="2" y1="12" x2="22" y2="12"></line>
-                                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                                    </svg>
-                                    REST APIs & SQL
-                                </span>
-                                <span class="skill-chip">
-                                    <svg class="chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polyline points="16 18 22 12 16 6"></polyline>
-                                        <polyline points="8 6 2 12 8 18"></polyline>
-                                    </svg>
-                                    Tailwind CSS
-                                </span>
-                                <span class="skill-chip">
-                                    <svg class="chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                                    </svg>
-                                    Hibernate JPA
-                                </span>
-                                <span class="skill-chip">
-                                    <svg class="chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
-                                    </svg>
-                                    Git & GitHub
-                                </span>
+                        <div class="about-highlights-grid">
+                            <div class="highlight-item">
+                                <div class="highlight-icon">🏛️</div>
+                                <div>
+                                    <h4>Microservices Architecture</h4>
+                                    <p>Spring Cloud Gateway, Netflix Eureka, RabbitMQ & Docker Compose</p>
+                                </div>
                             </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon">🛡️</div>
+                                <div>
+                                    <h4>Enterprise Security</h4>
+                                    <p>Stateless Spring Security JWT, BCrypt, RBAC & OWASP standards</p>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon">⚡</div>
+                                <div>
+                                    <h4>Performance Tuning</h4>
+                                    <p>Hibernate JPA tuning, JPQL JOIN FETCH, DTO projections & indexing</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills-section" id="skills">
+            <div class="container">
+                <h2 class="section-title text-center">Technical Skills & Expertise</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle text-center">Comprehensive stack engineered for scalable enterprise backends and modern web frontends.</p>
+
+                <div class="skills-matrix-grid">
+                    <!-- Card 1: Backend & Microservices -->
+                    <div class="skills-card">
+                        <div class="skills-card-header">
+                            <div class="skills-icon-wrap icon-backend">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                                    <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                                    <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                                </svg>
+                            </div>
+                            <h3>Backend & Microservices</h3>
+                        </div>
+                        <p class="skills-card-desc">Distributed architectures, asynchronous event streaming, and secure RESTful services.</p>
+                        <div class="skills-tags-wrap">
+                            <span class="skill-pill">Java 8 / 17</span>
+                            <span class="skill-pill">Spring Boot 3</span>
+                            <span class="skill-pill">Spring Cloud</span>
+                            <span class="skill-pill">Netflix Eureka</span>
+                            <span class="skill-pill">Spring Security (JWT)</span>
+                            <span class="skill-pill">gRPC & Protobuf</span>
+                            <span class="skill-pill">Apache Kafka</span>
+                            <span class="skill-pill">RabbitMQ</span>
+                            <span class="skill-pill">Hibernate ORM</span>
+                            <span class="skill-pill">Spring Data JPA</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Databases & DevOps -->
+                    <div class="skills-card">
+                        <div class="skills-card-header">
+                            <div class="skills-icon-wrap icon-db">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                                </svg>
+                            </div>
+                            <h3>Databases & DevOps</h3>
+                        </div>
+                        <p class="skills-card-desc">Relational schema design, transaction isolation, and containerized deployment.</p>
+                        <div class="skills-tags-wrap">
+                            <span class="skill-pill">MySQL 8.0</span>
+                            <span class="skill-pill">PostgreSQL</span>
+                            <span class="skill-pill">Docker & Compose</span>
+                            <span class="skill-pill">Maven</span>
+                            <span class="skill-pill">Git & GitHub</span>
+                            <span class="skill-pill">Postman API Testing</span>
+                            <span class="skill-pill">Swagger / OpenAPI</span>
+                            <span class="skill-pill">IntelliJ IDEA</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Frontend & Web UI -->
+                    <div class="skills-card">
+                        <div class="skills-card-header">
+                            <div class="skills-icon-wrap icon-frontend">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                    <polyline points="2 17 12 22 22 17"></polyline>
+                                    <polyline points="2 12 12 17 22 12"></polyline>
+                                </svg>
+                            </div>
+                            <h3>Frontend & Interfaces</h3>
+                        </div>
+                        <p class="skills-card-desc">Responsive, dynamic client dashboards built with modern JavaScript and React.</p>
+                        <div class="skills-tags-wrap">
+                            <span class="skill-pill">React.js</span>
+                            <span class="skill-pill">Tailwind CSS</span>
+                            <span class="skill-pill">JavaScript (ES6+)</span>
+                            <span class="skill-pill">TypeScript</span>
+                            <span class="skill-pill">Vite</span>
+                            <span class="skill-pill">Axios & Fetch API</span>
+                            <span class="skill-pill">HTML5 Canvas</span>
+                            <span class="skill-pill">CSS3 Animations</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Architecture & Quality -->
+                    <div class="skills-card">
+                        <div class="skills-card-header">
+                            <div class="skills-icon-wrap icon-testing">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                            </div>
+                            <h3>Testing & Architecture</h3>
+                        </div>
+                        <p class="skills-card-desc">Test-driven development, transaction integrity, and robust error resilience.</p>
+                        <div class="skills-tags-wrap">
+                            <span class="skill-pill">JUnit 5</span>
+                            <span class="skill-pill">Mockito</span>
+                            <span class="skill-pill">TDD</span>
+                            <span class="skill-pill">RESTful API Design</span>
+                            <span class="skill-pill">ACID Transactions</span>
+                            <span class="skill-pill">DTO Pattern</span>
+                            <span class="skill-pill">Row-Level Locking</span>
+                            <span class="skill-pill">OWASP Security</span>
                         </div>
                     </div>
                 </div>
@@ -181,101 +350,299 @@
         <!-- Projects Section -->
         <section class="projects" id="projects">
             <div class="container">
-                <h2 class="section-title text-center">My Projects</h2>
+                <h2 class="section-title text-center">Featured Projects</h2>
                 <div class="section-divider"></div>
+                <p class="section-subtitle text-center">Production-grade systems demonstrating distributed architecture, performance tuning, and clean code.</p>
                 
                 <!-- Category Filter -->
                 <div class="filter-tabs">
                     <button class="filter-btn active" data-filter="all" id="filter-all">All Projects</button>
+                    <button class="filter-btn" data-filter="microservices" id="filter-microservices">Microservices & Backend</button>
                     <button class="filter-btn" data-filter="fullstack" id="filter-fullstack">Full Stack</button>
-                    <button class="filter-btn" data-filter="backend" id="filter-backend">Backend APIs</button>
+                    <button class="filter-btn" data-filter="corejava" id="filter-corejava">Core Java & DSA</button>
                 </div>
 
                 <!-- Projects Grid -->
                 <div class="projects-grid" id="projects-grid">
-                    <!-- Project 1 (Fullstack) -->
-                    <div class="project-card" data-category="fullstack">
+                    <!-- Project 1: Salon Service Platform (Microservices / Full Stack) -->
+                    <div class="project-card" data-category="microservices fullstack">
                         <div class="project-image-box">
-                            <img src="images/project1.jpg" alt="Salon Service Web Application UI" class="project-img">
-                            <div class="project-overlay">
-                                <a href="https://github.com/Govindkalal84" target="_blank" rel="noopener noreferrer" class="project-overlay-link" aria-label="View Project Code">
-                                    <svg class="overlay-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                    </svg>
-                                </a>
-                                <a href="https://salon-service-project.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-overlay-link" aria-label="Launch Salon Service Live Preview">
-                                    <svg class="overlay-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <img src="images/project1.jpg" alt="Salon Service Booking Platform" class="project-img">
+                            <div class="project-status-badge">Live Production</div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-header-meta">
+                                <span class="project-tag">Distributed Microservices</span>
+                                <span class="project-date">2026</span>
+                            </div>
+                            <h3 class="project-title">Salon Service Booking Platform</h3>
+                            <p class="project-desc">
+                                Enterprise-grade microservices appointment platform featuring API Gateway, Eureka discovery, dynamic catalog management, and asynchronous RabbitMQ alerts. Concurrency-safe scheduling engine with <code>@Transactional</code> isolation and row-level locking guarantees <strong>0 double-booking collisions</strong> under concurrent load.
+                            </p>
+                            <div class="project-features-list">
+                                <span>✔ 8 Loosely-coupled microservices</span>
+                                <span>✔ RabbitMQ event notifications</span>
+                                <span>✔ Multi-container Docker Compose</span>
+                            </div>
+                            <div class="project-tech">
+                                <span>Java 17</span>
+                                <span>Spring Boot 3</span>
+                                <span>Eureka</span>
+                                <span>RabbitMQ</span>
+                                <span>Docker</span>
+                                <span>MySQL</span>
+                                <span>React.js</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://salon-service-project.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-live">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                                         <polyline points="15 3 21 3 21 9"></polyline>
                                         <line x1="10" y1="14" x2="21" y2="3"></line>
                                     </svg>
+                                    <span>Live Demo</span>
                                 </a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <span class="project-tag">Full Stack | Personal Project</span>
-                            <h3 class="project-title">Salon Service Web App</h3>
-                            <p class="project-desc">
-                                Implemented end-to-end appointment booking and scheduling functionality for salon customers and staff. Managed customer records, services, and scheduling datasets securely.
-                            </p>
-                            <div class="project-tech">
-                                <span>Spring Boot</span>
-                                <span>React.js</span>
-                                <span>SQL Database</span>
+                                <a href="https://github.com/Govindkalal84/Salon-Service-Project" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-code">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                    </svg>
+                                    <span>GitHub Code</span>
+                                </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Project 2 (Fullstack) -->
+                    <!-- Project 2: Patient Management Microservice (Microservices) -->
+                    <div class="project-card" data-category="microservices">
+                        <div class="project-image-box">
+                            <img src="images/project3.jpg" alt="Patient Management Microservice Architecture" class="project-img">
+                            <div class="project-status-badge">Enterprise Microservice</div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-header-meta">
+                                <span class="project-tag">gRPC & Apache Kafka</span>
+                                <span class="project-date">2026</span>
+                            </div>
+                            <h3 class="project-title">Patient Management Microservice</h3>
+                            <p class="project-desc">
+                                Distributed healthcare service integrating high-performance <strong>gRPC Protocol Buffers</strong> client for low-latency billing service synchronization, event-driven streaming via <strong>Apache Kafka</strong> for patient lifecycle events, and interactive <strong>OpenAPI 3 / Swagger</strong> documentation.
+                            </p>
+                            <div class="project-features-list">
+                                <span>✔ Sub-millisecond gRPC binary RPC</span>
+                                <span>✔ Asynchronous Kafka topic producer</span>
+                                <span>✔ PostgreSQL & Swagger UI</span>
+                            </div>
+                            <div class="project-tech">
+                                <span>Spring Boot 3</span>
+                                <span>gRPC</span>
+                                <span>Protobuf</span>
+                                <span>Apache Kafka</span>
+                                <span>PostgreSQL</span>
+                                <span>Swagger</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/Govindkalal84/Patient-mangament-Project" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-code btn-full-width">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                    </svg>
+                                    <span>View Repository & Architecture</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Food Delivery Platform (Fullstack / Backend) -->
                     <div class="project-card" data-category="fullstack">
                         <div class="project-image-box">
-                            <img src="images/project2.jpg" alt="Food Delivery Platform Dashboard" class="project-img">
-                            <div class="project-overlay">
-                                <a href="https://github.com/Govindkalal84" target="_blank" rel="noopener noreferrer" class="project-overlay-link" aria-label="View Project Code">
-                                    <svg class="overlay-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                    </svg>
-                                </a>
-                            </div>
+                            <img src="images/project2.jpg" alt="Food Delivery Platform" class="project-img">
+                            <div class="project-status-badge">Full Stack E-Commerce</div>
                         </div>
                         <div class="project-info">
-                            <span class="project-tag">Academic | Personal Project</span>
-                            <h3 class="project-title">Food Delivery Platform</h3>
+                            <div class="project-header-meta">
+                                <span class="project-tag">Spring Boot & React</span>
+                                <span class="project-date">2026</span>
+                            </div>
+                            <h3 class="project-title">Food Delivery & Ordering Platform</h3>
                             <p class="project-desc">
-                                Engineered an order lifecycle platform. Secured users with JWT authentication & BCrypt. Optimized payload efficiency by 30% using custom JPA specs and data transfer objects.
+                                End-to-end food ordering platform processing accounts, real-time carts, and checkout across 5 micro-modules. Secured 20+ endpoints with stateless <strong>Spring Security JWT & BCrypt</strong>. Eliminated N+1 query bottlenecks via JPQL <code>JOIN FETCH</code> (-45% latency, -30% payload size) and built dynamic search with JPA Specifications (<80ms lookup).
                             </p>
+                            <div class="project-features-list">
+                                <span>✔ Stateless JWT filter security</span>
+                                <span>✔ JPQL JOIN FETCH optimization</span>
+                                <span>✔ Spring Data JPA Specifications</span>
+                            </div>
                             <div class="project-tech">
+                                <span>Java 17</span>
                                 <span>Spring Boot</span>
+                                <span>Spring Security</span>
+                                <span>JWT</span>
+                                <span>MySQL</span>
                                 <span>React.js</span>
-                                <span>JWT Security</span>
-                                <span>JPA</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/Govindkalal84" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-code btn-full-width">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                    </svg>
+                                    <span>Explore Backend Architecture</span>
+                                </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Project 3 (Backend) -->
-                    <div class="project-card" data-category="backend">
+                    <!-- Project 4: LeetCode DSA Visualizer (Core Java) -->
+                    <div class="project-card" data-category="corejava">
                         <div class="project-image-box">
-                            <img src="images/project3.jpg" alt="Backend API Microservice Mockup" class="project-img">
-                            <div class="project-overlay">
-                                <a href="https://github.com/Govindkalal84" target="_blank" rel="noopener noreferrer" class="project-overlay-link" aria-label="View Project Code">
-                                    <svg class="overlay-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <div class="code-visual-preview">
+                                <div class="code-terminal-header">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                    <span class="terminal-title">Java_Visualizer_Engine.java</span>
+                                </div>
+                                <div class="code-terminal-body">
+                                    <pre><code>// 3b1b-style Visualizer Engine
+public class FrameSnapshot {
+  Timeline.seek(stepIndex);
+  ArrayVisualizer.render(pivot);
+  // Zero external dependencies
+}</code></pre>
+                                </div>
+                            </div>
+                            <div class="project-status-badge">Pure Java Engine</div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-header-meta">
+                                <span class="project-tag">Core Java & 3b1b Animation</span>
+                                <span class="project-date">2026</span>
+                            </div>
+                            <h3 class="project-title">LeetCode DSA Visualizer Platform</h3>
+                            <p class="project-desc">
+                                High-performance, zero-dependency Java Data Structures & Algorithms animation engine inspired by 3Blue1Brown/Manim. Features an embedded HTTP server serving a reactive Web UI (timeline scrubber, variable speed 0.5x-4x, step-debugging) and terminal ANSI rendering mode.
+                            </p>
+                            <div class="project-features-list">
+                                <span>✔ Zero external dependencies (javac)</span>
+                                <span>✔ Embedded Java HttpServer & Web UI</span>
+                                <span>✔ Arrays, Trees, Graphs, DP Tables</span>
+                            </div>
+                            <div class="project-tech">
+                                <span>Java 17+</span>
+                                <span>Algorithms</span>
+                                <span>Data Structures</span>
+                                <span>Embedded HTTP</span>
+                                <span>ANSI Colors</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/Govindkalal84/leetcode-dsa-visualizer-java" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-code btn-full-width">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                                     </svg>
+                                    <span>View Engine Code</span>
                                 </a>
                             </div>
                         </div>
+                    </div>
+
+                    <!-- Project 5: Chalo Swarg Dekhe (Full Stack / AI) -->
+                    <div class="project-card" data-category="fullstack">
+                        <div class="project-image-box">
+                            <div class="code-visual-preview preview-travel">
+                                <div class="code-terminal-header">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                    <span class="terminal-title">Gemini_Travel_Concierge.tsx</span>
+                                </div>
+                                <div class="code-terminal-body">
+                                    <pre><code>// Google Gemini Travel Concierge
+const itinerary = await gemini.generateTrip({
+  satelliteTelemetry: OpenMeteo.live(),
+  haversineDistance: calc(coords)
+});</code></pre>
+                                </div>
+                            </div>
+                            <div class="project-status-badge">AI & Telemetry</div>
+                        </div>
                         <div class="project-info">
-                            <span class="project-tag">Backend Development</span>
-                            <h3 class="project-title">Tap Academy REST APIs</h3>
+                            <div class="project-header-meta">
+                                <span class="project-tag">React & Gemini AI</span>
+                                <span class="project-date">2026</span>
+                            </div>
+                            <h3 class="project-title">Chalo Swarg Dekhe (AI Travel App)</h3>
                             <p class="project-desc">
-                                Built clean, reliable CRUD interfaces, integrated SQL query databases for storage, and implemented Spring Data specifications during full-stack developer training.
+                                Modern travel discovery platform built with React, TypeScript, and Tailwind CSS. Features Google Gemini API itinerary planning, real-time meteorological satellite telemetry via Open-Meteo, MakeMyTrip-inspired booking console, and dynamic ambient sound synthesis via Web Audio API.
                             </p>
+                            <div class="project-features-list">
+                                <span>✔ Google Gemini API trip generator</span>
+                                <span>✔ Real-time weather satellite feeds</span>
+                                <span>✔ Web Audio API soundscape</span>
+                            </div>
                             <div class="project-tech">
-                                <span>Java SE</span>
-                                <span>Spring Boot</span>
-                                <span>Hibernate</span>
-                                <span>SQL</span>
+                                <span>React 18</span>
+                                <span>TypeScript</span>
+                                <span>Tailwind CSS</span>
+                                <span>Gemini API</span>
+                                <span>Vite</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/Govindkalal84/chalo-swarg-dekhe" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-code btn-full-width">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                    </svg>
+                                    <span>View Travel App Code</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6: Console Banking System (Core Java) -->
+                    <div class="project-card" data-category="corejava">
+                        <div class="project-image-box">
+                            <div class="code-visual-preview preview-bank">
+                                <div class="code-terminal-header">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                    <span class="terminal-title">Banking_Domain_Model.java</span>
+                                </div>
+                                <div class="code-terminal-body">
+                                    <pre><code>// Domain Driven OOP Architecture
+public class Account {
+  private double balance;
+  private List&lt;Transaction&gt; ledger;
+  // Atomic deposit, withdraw, transfer
+}</code></pre>
+                                </div>
+                            </div>
+                            <div class="project-status-badge">Core Java OOP</div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-header-meta">
+                                <span class="project-tag">Domain Architecture</span>
+                                <span class="project-date">2026</span>
+                            </div>
+                            <h3 class="project-title">Console Banking & Ledger System</h3>
+                            <p class="project-desc">
+                                Core Java financial system demonstrating strict OOP principles (Inheritance, Polymorphism, Abstraction, Encapsulation). Implements in-memory transactional ledger bookkeeping, atomic money transfers, and defensive validation.
+                            </p>
+                            <div class="project-features-list">
+                                <span>✔ Immutable audit transaction logging</span>
+                                <span>✔ Atomic transfer validation</span>
+                                <span>✔ Clean CLI interactive shell</span>
+                            </div>
+                            <div class="project-tech">
+                                <span>Java 17</span>
+                                <span>OOP Patterns</span>
+                                <span>Clean Architecture</span>
+                                <span>Data Structures</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/Govindkalal84/Bank-application-Console-based-" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-code btn-full-width">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                    </svg>
+                                    <span>View Banking Architecture</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -286,33 +653,56 @@
         <!-- Experience Timeline Section -->
         <section class="timeline-section" id="timeline">
             <div class="container">
-                <h2 class="section-title text-center">My Journey</h2>
+                <h2 class="section-title text-center">Experience & Education</h2>
                 <div class="section-divider"></div>
+                <p class="section-subtitle text-center">My journey in software engineering, technical training, and computer science.</p>
                 
                 <div class="timeline">
-                    <!-- Experience 1 -->
+                    <!-- Experience 1: Tap Academy -->
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
-                        <div class="timeline-date">Jan 2026 - Present</div>
+                        <div class="timeline-date">Jan 2026 – Present</div>
                         <div class="timeline-content">
+                            <span class="timeline-badge">Work Experience</span>
                             <h3>Full Stack Developer Intern</h3>
-                            <h4>Tap Academy | Bengaluru, India</h4>
-                            <p>
-                                Developing backend applications using Java and Spring Boot. Integrating SQL databases for reliable data management, constructing secure REST APIs, and collaborating on real-world projects.
-                            </p>
+                            <h4>Tap Academy • Bengaluru, India</h4>
+                            <ul class="timeline-points">
+                                <li>Engineered <strong>15+ production-grade RESTful APIs</strong> using Java 17 and Spring Boot following layered architecture, reducing endpoint response latency by 25%.</li>
+                                <li>Optimized relational database schemas across <strong>8+ MySQL entities</strong>, boosting query execution throughput by 35% through indexing and JPA mapping tuning.</li>
+                                <li>Constructed a centralized exception-handling layer using <code>@RestControllerAdvice</code>, eliminating unhandled HTTP 500 runtime errors across 100% of controller routes.</li>
+                                <li>Automated backend validation pipelines with <strong>50+ Postman test collections</strong>, preserving 99%+ build stability across bi-weekly Agile sprints.</li>
+                            </ul>
                         </div>
                     </div>
 
-                    <!-- Education 1 -->
+                    <!-- Education: BKIT -->
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
-                        <div class="timeline-date">2022 - 2026</div>
+                        <div class="timeline-date">2022 – 2026</div>
                         <div class="timeline-content">
-                            <h3>B.E. in Computer Science & Engineering</h3>
-                            <h4>Bheemanna Khandre Institute of Technology | Bhalki, India</h4>
-                            <p>
-                                Focused on Core CS fundamentals. Achieved a CGPA of **8.6 / 10.0**. Received Cyber Security Certification covering secure coding practices and web authentication risks.
+                            <span class="timeline-badge">Education</span>
+                            <h3>Bachelor of Engineering (B.E.) in Computer Science & Engineering</h3>
+                            <h4>Bheemanna Khandre Institute of Technology • Bhalki, India</h4>
+                            <p class="timeline-desc">
+                                Core Computer Science coursework: Data Structures & Algorithms, Database Management Systems (DBMS), Operating Systems, Computer Networks, and Object-Oriented Software Design.
                             </p>
+                            <div class="education-meta">
+                                <span><strong>CGPA:</strong> 7.41 / 10.0 (First Class)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certifications -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Certifications & Training</div>
+                        <div class="timeline-content">
+                            <span class="timeline-badge">Credentials</span>
+                            <h3>Industry Certifications</h3>
+                            <ul class="timeline-points">
+                                <li><strong>Java Full Stack Development Training (Tap Academy):</strong> Comprehensive certified training in Core Java, Spring Boot, Hibernate ORM, and MySQL (Cert No: 16760 | Reg No: TAJANC2C261821).</li>
+                                <li><strong>Cyber Security Certification:</strong> Comprehensive security training covering OWASP Top 10 web vulnerabilities, authentication security, and secure coding practices.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -324,6 +714,7 @@
             <div class="container">
                 <h2 class="section-title text-center">Get In Touch</h2>
                 <div class="section-divider"></div>
+                <p class="section-subtitle text-center">Have a full-time role, internship, or technical collaboration in mind? I'd love to connect!</p>
                 
                 <div class="contact-wrapper">
                     <!-- Contact Cards -->
@@ -363,7 +754,19 @@
                             </div>
                             <div class="card-details">
                                 <h4>LinkedIn</h4>
-                                <a href="https://linkedin.com/in/govind-sadhanande-0352082b0" target="_blank" rel="noopener noreferrer">linkedin.com/in/govind-sadhanande</a>
+                                <a href="https://linkedin.com/in/govind-sadhanande" target="_blank" rel="noopener noreferrer">linkedin.com/in/govind-sadhanande</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="card-icon-box">
+                                <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                            </div>
+                            <div class="card-details">
+                                <h4>GitHub</h4>
+                                <a href="https://github.com/Govindkalal84" target="_blank" rel="noopener noreferrer">github.com/Govindkalal84</a>
                             </div>
                         </div>
                     </div>
@@ -374,20 +777,20 @@
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="form-name">Your Name</label>
-                                    <input type="text" id="form-name" placeholder="John Doe" required>
+                                    <input type="text" id="form-name" placeholder="E.g., Jane Smith" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="form-email">Your Email</label>
-                                    <input type="email" id="form-email" placeholder="john@example.com" required>
+                                    <input type="email" id="form-email" placeholder="jane@company.com" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="form-subject">Subject</label>
-                                <input type="text" id="form-subject" placeholder="Collaboration / Job Role" required>
+                                <input type="text" id="form-subject" placeholder="Role Opportunity / Technical Collaboration" required>
                             </div>
                             <div class="form-group">
                                 <label for="form-message">Message</label>
-                                <textarea id="form-message" rows="5" placeholder="Tell me about your project or vacancy..." required></textarea>
+                                <textarea id="form-message" rows="5" placeholder="Hi Govind, we came across your backend microservices projects and would love to discuss..." required></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary btn-submit" id="form-submit-btn">
                                 <span>Send Message</span>
@@ -414,14 +817,25 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-container">
-            <p class="copyright">&copy; 2026 Govind. Built with Vanilla HTML, CSS & JS. All Rights Reserved.</p>
+            <div class="footer-info">
+                <span class="footer-brand">&lt;Govind Sadhanande /&gt;</span>
+                <p class="copyright">&copy; 2026 Govind Sadhanande. Java Backend & Full Stack Developer.</p>
+            </div>
             <div class="footer-links">
+                <a href="Govind_Sadhanande_Resume.pdf" download="Govind_Sadhanande_Resume.pdf" class="footer-link-pill">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    <span>Resume</span>
+                </a>
                 <a href="https://github.com/Govindkalal84" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                     <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                     </svg>
                 </a>
-                <a href="https://linkedin.com/in/govind-sadhanande-0352082b0" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <a href="https://linkedin.com/in/govind-sadhanande" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                         <rect x="2" y="9" width="4" height="12"></rect>

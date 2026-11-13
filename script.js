@@ -1,5 +1,5 @@
 /**
- * Alex Morgan - Portfolio Website JS
+ * Govind Sadhanande - Portfolio Website JS
  * Interactive functionalities including Canvas background, Theme Manager,
  * typing effects, project filter tabs, scroll animation, and contact form.
  */
@@ -98,75 +98,69 @@ function initCanvasBackground() {
 
     // Expose theme updater globally
     window.updateParticleTheme = function(theme) {
-        isDark = theme === 'dark';
-        particleColor = isDark ? 'rgba(129, 140, 248, 0.4)' : 'rgba(79, 70, 229, 0.2)';
-        lineColor = isDark ? 'rgba(192, 132, 252, 0.08)' : 'rgba(147, 51, 234, 0.05)';
-        particles.forEach(p => p.updateColor(particleColor));
+        const dark = theme === 'dark';
+        particleColor = dark ? 'rgba(129, 140, 248, 0.4)' : 'rgba(79, 70, 229, 0.2)';
+        lineColor = dark ? 'rgba(192, 132, 252, 0.08)' : 'rgba(147, 51, 234, 0.05)';
     };
 
-    // Handle Resize
     function resizeCanvas() {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
-        initParticles();
     }
-    
-    window.addEventListener('resize', resizeCanvas);
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
 
-    // Mouse events
+    resizeCanvas();
+    window.addEventListener('resize', () => {
+        resizeCanvas();
+        initParticles();
+    });
+
+    // Track mouse interaction
     window.addEventListener('mousemove', (e) => {
         mouse.x = e.clientX;
         mouse.y = e.clientY;
     });
 
-    window.addEventListener('mouseleave', () => {
+    window.addEventListener('mouseout', () => {
         mouse.x = null;
         mouse.y = null;
     });
 
-    // Particle Object
+    // Particle Class
     class Particle {
         constructor(x, y) {
             this.x = x;
             this.y = y;
-            this.baseRadius = Math.random() * 2 + 1.5;
+            this.baseRadius = Math.random() * 2 + 1;
             this.radius = this.baseRadius;
-            this.vx = (Math.random() - 0.5) * 0.5;
-            this.vy = (Math.random() - 0.5) * 0.5;
-            this.color = particleColor;
-        }
-
-        updateColor(color) {
-            this.color = color;
+            this.speedX = (Math.random() - 0.5) * 0.8;
+            this.speedY = (Math.random() - 0.5) * 0.8;
         }
 
         draw() {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-            ctx.fillStyle = this.color;
+            ctx.fillStyle = particleColor;
             ctx.fill();
         }
 
         update() {
-            // Collision with boundaries
-            if (this.x < 0 || this.x > canvas.width) this.vx = -this.vx;
-            if (this.y < 0 || this.y > canvas.height) this.vy = -this.vy;
+            // Standard drift
+            this.x += this.speedX;
+            this.y += this.speedY;
 
-            this.x += this.vx;
-            this.y += this.vy;
+            // Bounce off boundaries
+            if (this.x < 0 || this.x > canvas.width) this.speedX = -this.speedX;
+            if (this.y < 0 || this.y > canvas.height) this.speedY = -this.speedY;
 
-            // Mouse interaction
-            if (mouse.x != null && mouse.y != null) {
+            // Mouse proximity repulsion/attraction
+            if (mouse.x !== null && mouse.y !== null) {
                 let dx = mouse.x - this.x;
                 let dy = mouse.y - this.y;
-                let dist = Math.sqrt(dx * dx + dy * dy);
-                
-                if (dist < mouse.radius) {
-                    let force = (mouse.radius - dist) / mouse.radius;
-                    let angle = Math.atan2(dy, dx);
-                    
+                let distance = Math.sqrt(dx * dx + dy * dy);
+
+                if (distance < mouse.radius) {
+                    const force = (mouse.radius - distance) / mouse.radius;
+                    const angle = Math.atan2(dy, dx);
                     // Pull particles closer to mouse gently
                     this.x += Math.cos(angle) * force * 1.5;
                     this.y += Math.sin(angle) * force * 1.5;
@@ -236,10 +230,11 @@ function initTypingEffect() {
     if (!textElement) return;
 
     const words = [
-        "Java Full Stack Apps", 
-        "Spring Boot REST APIs", 
-        "React User Interfaces", 
-        "Scalable Database Systems"
+        "Distributed Microservices", 
+        "Spring Boot Backends", 
+        "Low-Latency gRPC & Kafka Pipelines", 
+        "Concurrency-Safe APIs",
+        "Responsive React Interfaces"
     ];
     let wordIndex = 0;
     let charIndex = 0;
@@ -252,21 +247,21 @@ function initTypingEffect() {
         if (isDeleting) {
             textElement.textContent = currentWord.substring(0, charIndex - 1);
             charIndex--;
-            typingSpeed = 50; // Deletes faster
+            typingSpeed = 40; // Deletes faster
         } else {
             textElement.textContent = currentWord.substring(0, charIndex + 1);
             charIndex++;
-            typingSpeed = 120; // Natural typing pace
+            typingSpeed = 110; // Natural typing pace
         }
 
         // Handle states
         if (!isDeleting && charIndex === currentWord.length) {
-            typingSpeed = 2000; // Pause at end of word
+            typingSpeed = 2200; // Pause at end of word
             isDeleting = true;
         } else if (isDeleting && charIndex === 0) {
             isDeleting = false;
             wordIndex = (wordIndex + 1) % words.length;
-            typingSpeed = 500; // Pause before typing new word
+            typingSpeed = 450; // Pause before typing new word
         }
 
         setTimeout(type, typingSpeed);
@@ -292,14 +287,14 @@ function initProjectFilter() {
             const filterValue = btn.getAttribute('data-filter');
 
             projectCards.forEach(card => {
-                const category = card.getAttribute('data-category');
+                const category = card.getAttribute('data-category') || '';
                 
                 // Add scale out transition
                 card.style.transform = 'scale(0.85)';
                 card.style.opacity = '0';
                 
                 setTimeout(() => {
-                    if (filterValue === 'all' || category === filterValue) {
+                    if (filterValue === 'all' || category.includes(filterValue)) {
                         card.classList.remove('hide');
                         setTimeout(() => {
                             card.style.transform = 'scale(1)';
@@ -308,7 +303,7 @@ function initProjectFilter() {
                     } else {
                         card.classList.add('hide');
                     }
-                }, 300); // Matches transitions
+                }, 250);
             });
         });
     });
@@ -318,30 +313,28 @@ function initProjectFilter() {
    6. INTERSECTION OBSERVER FOR SCROLL FADES
    ========================================== */
 function initScrollAnimations() {
-    // Add fade-in classes to elements dynamically for clean setup
     const sections = document.querySelectorAll('section');
     const headers = document.querySelectorAll('.section-title');
-    const cards = document.querySelectorAll('.project-card, .timeline-content, .contact-card, .contact-form-box');
+    const cards = document.querySelectorAll('.project-card, .timeline-content, .contact-card, .contact-form-box, .metric-card, .skills-card');
 
     // Setup helper classes
     headers.forEach(h => h.classList.add('fade-in-up'));
     cards.forEach(c => c.classList.add('fade-in-up'));
 
     const options = {
-        threshold: 0.12,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.1,
+        rootMargin: '0px 0px -40px 0px'
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('appear');
-                observer.unobserve(entry.target); // Trigger only once
+                observer.unobserve(entry.target);
             }
         });
     }, options);
 
-    // Observe animatable elements
     const elementsToAnimate = document.querySelectorAll('.fade-in-up');
     elementsToAnimate.forEach(el => {
         observer.observe(el);
@@ -354,7 +347,7 @@ function initScrollAnimations() {
         let currentSection = '';
         
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - 150;
+            const sectionTop = section.offsetTop - 180;
             const sectionHeight = section.clientHeight;
             if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
                 currentSection = section.getAttribute('id');
@@ -382,38 +375,42 @@ function initContactForm() {
     const submitBtn = document.getElementById('form-submit-btn');
 
     form.addEventListener('submit', (e) => {
-        e.preventDefault(); // Prevent default page refresh
+        e.preventDefault();
 
-        // Loading state
+        const nameInput = document.getElementById('form-name');
+        const emailInput = document.getElementById('form-email');
+        const subjectInput = document.getElementById('form-subject');
+        const messageInput = document.getElementById('form-message');
+
         const originalBtnHTML = submitBtn.innerHTML;
         submitBtn.disabled = true;
         submitBtn.innerHTML = `
-            <span>Sending...</span>
+            <span>Preparing Message...</span>
             <svg class="btn-icon spinner" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation: spin 1s linear infinite">
                 <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
                 <path d="M12 2a10 10 0 0 1 10 10" stroke-linecap="round"></path>
             </svg>
         `;
 
-        // Simulate network call
         setTimeout(() => {
-            // Revert state
+            // Open user's mail client directly as guaranteed fallback
+            const recipient = "ntg043172@gmail.com";
+            const subject = encodeURIComponent(`[Portfolio Inquiry] ${subjectInput.value}`);
+            const body = encodeURIComponent(`Hi Govind,\n\nName: ${nameInput.value}\nEmail: ${emailInput.value}\n\nMessage:\n${messageInput.value}`);
+            
+            window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+
             submitBtn.disabled = false;
             submitBtn.innerHTML = originalBtnHTML;
-
-            // Reset form fields
             form.reset();
-
-            // Display custom success toast
-            showToast("Your message was sent successfully!");
-        }, 1500);
+            showToast("Opening mail client to send your message!");
+        }, 1000);
     });
 
     function showToast(message) {
         toastText.textContent = message;
         toast.classList.add('show');
 
-        // Dismiss Toast after 4 seconds
         setTimeout(() => {
             toast.classList.remove('show');
         }, 4000);
